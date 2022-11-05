@@ -155,3 +155,18 @@ function testTime (){
         $(".form5").addClass("present");
     };
 }
+// Loop to getItem to local storage
+testTime ();
+var x = [9, 10, 11, 12, 1, 2, 3, 4, 5];
+for (var i = 0; i < x.length; i++) {
+    var dataHour = localStorage.getItem (x[i]);
+    $(".form") + x[i].valueOf(dataHour);
+}
+
+// Event listener to save input to local storage
+$(".saveBtn").click(function () {
+    event.preventDefault();
+    var formValue = $(this).siblings (".form-control").val();
+    console.log ("It worked");
+    var listItem = $(this).parent().data("hour");
+});
