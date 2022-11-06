@@ -1,3 +1,4 @@
+/* Element Selector */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -13,6 +14,7 @@ textarea {
   padding: 10px;
 }
 
+/* Class Selector */
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -20,7 +22,7 @@ textarea {
   border-radius: 0;
   border-bottom: 10px solid black;
 }
-
+ 
 .description {
   white-space: pre-wrap;
 }
@@ -69,3 +71,5 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+

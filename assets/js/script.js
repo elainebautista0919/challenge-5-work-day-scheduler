@@ -1,6 +1,6 @@
 // Moment for date and time
 moment(Date);
-$("current Day").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
+$("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
 // Current time
 var currentTime = moment();
 // Round off time to nearest hour
