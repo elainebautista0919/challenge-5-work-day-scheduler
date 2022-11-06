@@ -5,8 +5,8 @@ $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
 var currentTime = moment();
 // Round off time to nearest hour
 currentTime = currentTime.startOf("hour");
-// 9AM as start of day
-var beforeTime = moment().startOf('day').add(9, "hours");
+// 9AM as start of day (10 bececause daylight savings)
+var beforeTime = moment().startOf('day').add(10, "hours");
 
 // Timeblocks
     // 9AM
