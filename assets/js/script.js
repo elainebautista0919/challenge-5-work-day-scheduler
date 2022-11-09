@@ -1,12 +1,12 @@
-// Moment for date and time
-moment(Date);
-$("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
+// dayjs for date and time
+dayjs(Date);
+$("#currentDay").text(dayjs().format('dddd MMMM D, YYYY, h:mm a'));
 // Current time
-var currentTime = moment();
+var currentTime = dayjs();
 // Round off time to nearest hour
 currentTime = currentTime.startOf("hour");
-// 9AM as start of day (10 bececause daylight savings)
-var beforeTime = moment().startOf('day').add(10, "hours");
+// 9AM as start of day
+var beforeTime = dayjs().startOf('day').add(9, "hours");
 
 // Timeblocks
     // 9AM
@@ -57,7 +57,7 @@ var beforeTime = moment().startOf('day').add(10, "hours");
 // Function to compare actual time with timeblocks
 function testTime (){
     // 9AM
-    time1 = moment().startOf('day').add(9, "hours");
+    time1 = dayjs().startOf('day').add(9, "hours");
     currentTime = currentTime.startOf("hour");
     if (currentTime.isAfter(time1)){
         $(".form9").addClass("past");
@@ -68,7 +68,7 @@ function testTime (){
     };
 
     // 10AM
-    time2 = moment().startOf('day').add(10, "hours");
+    time2 = dayjs().startOf('day').add(10, "hours");
     currentTime = currentTime.startOf("hour");
     if (currentTime.isAfter(time2)){
         $(".form10").addClass("past");
@@ -79,7 +79,7 @@ function testTime (){
     };
 
     // 11AM
-    time3 = moment().startOf('day').add(11, "hours");
+    time3 = dayjs().startOf('day').add(11, "hours");
     currentTime = currentTime.startOf("hour");
     if (currentTime.isAfter(time3)){
         $(".form11").addClass("past");
@@ -90,7 +90,7 @@ function testTime (){
     };
 
     // 12PM
-    time4 = moment().startOf('day').add(12, "hours");
+    time4 = dayjs().startOf('day').add(12, "hours");
     currentTime = currentTime.startOf("hour");
     if (currentTime.isAfter(time4)){
         $(".form12").addClass("past");
@@ -101,7 +101,7 @@ function testTime (){
     };
 
     // 1PM
-    time5 = moment().startOf('day').add(13, "hours");
+    time5 = dayjs().startOf('day').add(13, "hours");
     currentTime = currentTime.startOf("hour");
     if (currentTime.isAfter(time5)){
         $(".form1").addClass("past");
@@ -112,7 +112,7 @@ function testTime (){
     };
 
     // 2PM
-    time6 = moment().startOf('day').add(14, "hours");
+    time6 = dayjs().startOf('day').add(14, "hours");
     currentTime = currentTime.startOf("hour");
     if (currentTime.isAfter(time6)){
         $(".form2").addClass("past");
@@ -123,7 +123,7 @@ function testTime (){
     };
 
     // 3PM
-    time7 = moment().startOf('day').add(15, "hours");
+    time7 = dayjs().startOf('day').add(15, "hours");
     currentTime = currentTime.startOf("hour");
     if (currentTime.isAfter(time7)){
         $(".form3").addClass("past");
@@ -134,7 +134,7 @@ function testTime (){
     };
 
     // 4PM
-    time8 = moment().startOf('day').add(16, "hours");
+    time8 = dayjs().startOf('day').add(16, "hours");
     currentTime = currentTime.startOf("hour");
     if (currentTime.isAfter(time8)){
         $(".form4").addClass("past");
@@ -145,7 +145,7 @@ function testTime (){
     };
 
     // 5PM
-    time9 = moment().startOf('day').add(17, "hours");
+    time9 = dayjs().startOf('day').add(17, "hours");
     currentTime = currentTime.startOf("hour");
     if (currentTime.isAfter(time9)){
         $(".form5").addClass("past");
